@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f3;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff4d6d;
+  line-height: 1.4;
+  min-height: 3em; /* Reserve space for two lines */
+}
+
+/* Typing cursor */
+h1::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.buttons {
+  margin-top: 40px;
+  transition: opacity 0.5s ease-in;
+  max-width: 90%;
+  touch-action: none;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#yesBtn {
+  background-color: #ff4d6d;
+  color: white;
+  margin-right: 20px;
+}
+
+#noBtn {
+  background-color: #adb5bd;
+  color: white;
+  position: absolute; /* Allows for movement */
+  transition:
+    left 0.1s ease,
+    top 0.1s ease;
+}
